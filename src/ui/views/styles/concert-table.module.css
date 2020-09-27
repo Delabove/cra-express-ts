@@ -1,10 +1,12 @@
 .table{
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   width: 100%;
+  overflow: hidden;
 
     }
-    td th {
+    .td .th {
       border: 1px solid #999;
       padding: 0.5rem;
       text-align: left;
+
 }

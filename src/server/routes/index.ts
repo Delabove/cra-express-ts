@@ -2,11 +2,12 @@
 import { Express } from 'express'
 import fetchConcerts from '../helpers/fetchConcerts'
 
-
+//routes fetch to concerts page through express
 const routeHandler = (app: Express): void => {
   app.get('/concerts', (req, res) => {
     fetchConcerts(req, res)
   })
+
   /**
    * any additional routes would be declared here with the same style:
    * do the code logic somewhere else - keep this area clean to see which routes are available.
