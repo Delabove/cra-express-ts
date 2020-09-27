@@ -35,6 +35,7 @@ const ConcertTable = ({ routeProps }: Props) => {
   ) : (
     <>
       <h1>Concert List</h1>
+      <div className={styles.concertPage}>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -48,11 +49,14 @@ const ConcertTable = ({ routeProps }: Props) => {
             <tr key={uuid()}>
               <td>{concert.artist}</td>
               <td>{concert.date}</td>
-              <td>{concert.location}</td>
+              <td className={styles.locationCell}>{concert.location}
+            <span className={styles.buyButton} ><button>Buy Ticket!</button></span>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+      </div>
     </>
   )
 }

@@ -6,6 +6,7 @@ import Footer from '../components/footer/Footer';
 
 
 
+
 const Landing = lazy(() => import('../views/Home'))
 const ConcertTable = lazy(() => import('../views/ConcertTable'))
 
@@ -15,7 +16,7 @@ const Router = () => {
       <Header />
       <Footer/>
       <Suspense fallback={<div>Loading..</div>}>
-        <main style={{ marginTop: '30px' }}>
+        <main  style={{ marginTop: '50px' }}>
           <Switch>
             <Route path='/table' render={(routeProps: RouteProps) => <ConcertTable routeProps={routeProps} />} />
             <Route path='/' component={Landing} />
