@@ -1,0 +1,24 @@
+[
+    {
+      "artist": "Donna Summer",
+      "location": "Dallas",
+      "date": "December 1, 2020"
+
+    },
+    {
+      "artist": "Kelly Clarkson",
+      "location": "Austin",
+      "date": "November 2, 2020"
+    },
+    {
+      "artist": "Daya",
+      "location": "New Orleans",
+      "date": "October 3, 2020"
+    },
+    {
+      "artist": "Jessie Reyes",
+      "location": "Dallas",
+      "date": "August 4, 2020"
+
+    }
+  ]

@@ -1,23 +1,21 @@
-import express from "express";
-import bodyParser from "body-parser";
-import path from "path";
+import express from 'express'
+import cors from 'cors'
+import routeHandler from './routes/'
 
-const buildDir = path.join(process.cwd() + "/build");
-const app = express();
-app.use(bodyParser.json());
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
-app.use(express.static(buildDir));
+const app = express()
+// This allows the browser to make requests to this API ( which is running on a different port ).
+// Normally, CORS blocks requests like those, but this allows ALL browsers to make this request.
+// Normally, we would limit this value to be only the domain name where our website is hosted.
+app.use(cors())
 
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(buildDir, "index.html"));
-});
+// This sets up all the routes we are listening for
+routeHandler(app)
 
-const port = 5000;
-console.log("checking port", port);
-app.listen(port, () => {
-  console.log(`Server now listening on port: ${port}`);
-});
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
+  console.log('Hacking the mainframe...')
+  setTimeout(() => {
+    console.log('🚀  I need to capture the Avatar!')
+  }, 2000)
+})
