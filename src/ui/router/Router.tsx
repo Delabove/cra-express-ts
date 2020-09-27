@@ -3,11 +3,11 @@ import { Switch, Route, Redirect, RouteProps } from 'react-router-dom'
 
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import ConcertTable from '../views/ConcertTable';
+
 
 
 const Landing = lazy(() => import('../views/Home'))
-const ConcertList = lazy(() => import('../views/ConcertTable'))
+const ConcertTable = lazy(() => import('../views/ConcertTable'))
 
 const Router = () => {
   return (

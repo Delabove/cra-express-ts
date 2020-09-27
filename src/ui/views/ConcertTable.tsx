@@ -1,20 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import { RouteProps } from 'react-router-dom'
+import axios from 'axios'
 // import { v4 as uuid } from 'uuid'
 
-import client from '../client'
+// import client from '../client'
 import { Concert } from '../interfaces/concerts'
 
 
-
 import styles from './styles/concert-table.module.css';
+// import { response } from 'express';
 
 const ConcertTable = ({ routeProps }: Props) => {
   console.log('route props', routeProps)
+  const [concerts, setConcert] = useState<Concert[]>([])
 
+  const url = 'https://5f70e96b64a3720016e60053.mockapi.io';
 
+  useEffect(() => {
+    axios.get(url)
+      .then(response => {
+        setConcert(response.data);
+    })
 
+  }, [url])
 
+if(concerts){
   return (
 
       <>
@@ -28,17 +38,23 @@ const ConcertTable = ({ routeProps }: Props) => {
             </tr>
           </thead>
           <tbody>
-            {/* {concerts.map(concert => (
-              <tr key={uuid()}>
+            <h1>The concert list: </h1>
+            {concerts.map(concert => (
+              <tr>
                 <td>{concert.artist}</td>
                 <td>{concert.date}</td>
                 <td>{concert.location}</td>
               </tr>
-            ))} */}
+            ))}
           </tbody>
         </table>
       </>
     )
+            }
+
+            return(
+              <h1>Come back soon to view upcoming concerts!</h1>
+            )
 
 }
 
