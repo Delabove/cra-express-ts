@@ -16,7 +16,7 @@ app.get("/*", function (req, res) {
   res.sendFile(path.join(buildDir, "index.html"));
 });
 
-const port = 3001;
+const port = 5000;
 console.log("checking port", port);
 app.listen(port, () => {
   console.log(`Server now listening on port: ${port}`);
