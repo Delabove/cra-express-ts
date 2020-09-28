@@ -1,6 +1,6 @@
 
 .Main_Nav_List{
-  /* display: flex; */
+
   list-style: none;
   position: absolute;
   top: 0;
@@ -13,16 +13,15 @@
 
 }
 
-.Main_Nav_Logo, .main_nav_item{
-
-  display: flex;
-  margin-right: 20px;
-
-}
 
  .Main_Nav_UserLinks{
   display: flex;
   flex-direction: row-reverse;
   margin-right: 20px;
 
+}
+
+.main_nav_item{
+
+  margin-right: 20px;
 }

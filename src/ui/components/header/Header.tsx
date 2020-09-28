@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styles from './header.module.css';
 
 const Header = () => {
@@ -6,11 +7,11 @@ const Header = () => {
   // <div className={styles.Main_Nav}>
     <ul className={styles.Main_Nav_List}>
       <div className={styles.Main_Nav_Logo}>
-        <li className={styles.main_nav_item}>Logo</li>
+        {/* <li className={styles.main_nav_item}>Logo</li> */}
       </div>
       <div className={styles.Main_Nav_UserLinks}>
-        <li className={styles.main_nav_item}>Login</li>
-        <li className={styles.main_nav_item}>Signup</li>
+       <Link className={styles.main_nav_item} to="#">Login</Link>
+       <Link className={styles.main_nav_item} to="#">Signup</Link>
       </div>
     </ul>
 
