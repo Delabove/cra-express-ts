@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom';
 
 
 import styles from './styles/home.module.css'
+import Image from './images/Concert_Logo .png'
 
 
 const Home = () => {
   return (
     <div className={styles.landing}>
        <div className={styles.Main_Hero_Img} >
-          <h1  className={styles.Main_Header_Title}>Header Text</h1>
-        </div>
-      <Link to='/table'>See Concerts </Link>
+          <div  className={styles.Main_Header_Title}>
+            <img className={styles.Concert_Logo_Img} src={Image} alt="header-logo"></img>
+
+      </div>
+    </div>
+
       <div className={styles.layout}>
         <ul className={styles.layout_list}>
                     <li className={styles.description}>

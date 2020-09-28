@@ -33,11 +33,23 @@
     }
 
     .Main_Hero_Img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
         background-image: url("/images/Main-Hero-Image.png");
         background-repeat: no-repeat;
         background-position: center;
+        overflow: hidden;
         background-size: cover;
-        height: 700px;
+        width: 100%;
+        height: 100vh;
+
+    }
+
+    .Concert_Logo_Img{
+
+        width: 90%;
     }
 
     .design{
