@@ -11,10 +11,14 @@ const Home = () => {
     <div className={styles.landing}>
        <div className={styles.Main_Hero_Img} >
           <div  className={styles.Main_Header_Title}>
-            <img className={styles.Concert_Logo_Img} src={Image} alt="header-logo"></img>
+            <img className={styles.concertLogoImg} src={Image} alt="header-logo"></img>
+            <Link to={'/table'} className={styles.listLink}>View Upcoming Concerts</Link>
+          </div>
+
 
       </div>
-    </div>
+
+
 
       <div className={styles.layout}>
         <ul className={styles.layout_list}>
