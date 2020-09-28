@@ -32,6 +32,14 @@
 
     }
 
+    .Main_Hero_Img{
+        background-image: url("/images/Main-Hero-Image.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 700px;
+    }
+
     .design{
         grid-area: design;
         font-size: 20px;
@@ -58,14 +66,9 @@
         color: white;
         /* border: black solid .5px; */
     }
-    .img{
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
 
-    .Main_Hero_Img{
-       margin: 0;
+    .Main_Header_Title{
+        position: absolute;
     }
     .project_body{
     margin: 20px;
