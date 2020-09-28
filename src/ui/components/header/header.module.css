@@ -1,10 +1,28 @@
 
-
-.header {
+.Main_Nav_List{
+  /* display: flex; */
+  list-style: none;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   background-color: rgb(185, 185, 184);
-  height: 30px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+
+}
+
+.Main_Nav_Logo, .main_nav_item{
+
+  display: flex;
+  margin-right: 20px;
+
+}
+
+ .Main_Nav_UserLinks{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 20px;
+
 }

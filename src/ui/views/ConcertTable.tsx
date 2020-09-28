@@ -15,6 +15,9 @@ const ConcertTable = ({ routeProps }: Props) => {
 
   const [concerts, setConcert] = useState<Concert[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  // const [currentPage, setCurrentPage] = useState<IPage>({number: 1});
+  // const [concertsPerPage, setConcertsPerPage] = useState(15);
+
   useEffect(() => {
 
 
@@ -30,11 +33,17 @@ const ConcertTable = ({ routeProps }: Props) => {
     }
     fetchConcert()
   }, [])
+
+  // const indexOfLastPost = currentPage * setCurrentPage;
+  // const indexOFirstPost = indexOfLastPost - setConcertsPerPage;
+  // const currentConcerts = concerts.slice(indexOFirstPost, indexOFirstPost)
+
+
   return isLoading ? (
     <h1>Loading..</h1>
   ) : (
     <>
-      <h1>Concert List</h1>
+      <h1 className={styles.concertPageTitle}>Concert List</h1>
       <div className={styles.concertPage}>
       <table className={styles.table}>
         <thead>
